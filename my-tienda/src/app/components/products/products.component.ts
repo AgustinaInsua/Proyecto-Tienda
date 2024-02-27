@@ -9,6 +9,7 @@ import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-products',
@@ -20,7 +21,8 @@ import { ButtonModule } from 'primeng/button';
     RatingModule,
     TagModule,
     TabViewModule,
-    ButtonModule
+    ButtonModule,
+    CardModule
   ],
   providers: [ProductService],
   templateUrl: './products.component.html',

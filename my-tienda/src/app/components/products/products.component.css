@@ -1,14 +1,21 @@
+.conteiner-main {
+  display: flex;
+}
+
+.filters {
+  width: 30%;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  width: 60%;
-
+  justify-content: flex-start;
+  width: 60%; 
 }
 
 .product-item {
-  width: 300px; /* Ajusta el ancho de las tarjetas según tus preferencias */
-  margin: 10px; /* Espaciado entre las tarjetas */
+  width: 300px;
+  margin: 10px;
 }
 
 .product-card {
