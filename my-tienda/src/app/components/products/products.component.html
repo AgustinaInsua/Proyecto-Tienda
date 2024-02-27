@@ -1,1 +1,26 @@
-<p>products works!</p>
+<p-dataView #dv [value]="products">
+    <ng-template pTemplate="list" let-products>
+        <div class="product-list">
+            <div class="product-item" *ngFor="let item of products; let first = first">
+                <div class="product-card" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                    <img class="product-image" [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + item.image" [alt]="item.name" />
+                    <div class="product-details">
+                        <div class="product-name">{{ item.name }}</div>
+                        <p-rating [(ngModel)]="item.rating" [readonly]="true" [cancel]="false"></p-rating>
+                        <div class="product-info">
+                            <span class="product-category">
+                                <i class="pi pi-tag"></i>
+                                {{ item.category }}
+                            </span>
+                            <p-tag [value]="getSeverity(item)"></p-tag>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <span class="product-price">{{ '$' + item.price }}</span>
+                        <button pButton icon="pi pi-shopping-cart" class="md:align-self-end mb-2 p-button-rounded" [disabled]="item.inventoryStatus === 'OUTOFSTOCK'"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-dataView>

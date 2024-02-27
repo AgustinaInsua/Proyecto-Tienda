@@ -1,0 +1,40 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 60%;
+
+}
+
+.product-item {
+  width: 300px; /* Ajusta el ancho de las tarjetas según tus preferencias */
+  margin: 10px; /* Espaciado entre las tarjetas */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+}
